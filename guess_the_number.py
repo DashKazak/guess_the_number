@@ -44,15 +44,18 @@ def main():
     (low, high) = configure_range()
     secret = generate_secret(low, high)
 
+    count = 0 # initializes a count variable to 0
+
     while True:
         guess = get_guess()
         result = check_guess(guess, secret)
+        count += 1 # every time a guess is made, count goes up by 1
         print(result)
 
         if result == correct:
             break
 
-    print('Thanks for playing the game!')
+    print(f'Thanks for playing the game! Number of guesses used: {count}') # prints a message which includes the count variable
 
 
 if __name__ == '__main__':
