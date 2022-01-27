@@ -43,6 +43,8 @@ def main():
         if result == correct:
             break
 
+    print('Thanks for playing the game!')
+    print('Goodbye!')        
 
 if __name__ == '__main__':
     main()
