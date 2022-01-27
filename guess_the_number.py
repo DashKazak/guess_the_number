@@ -16,8 +16,17 @@ def generate_secret(low, high):
 
 
 def get_guess():
-    """ get user's guess, as an integer number """
-    return int(input('Guess the secret number? '))
+    """ get user's guess, as an integer number. Try/except statement runs in a loop to ensure the correct input entered. Correct input should be an integer value.  """
+    while True: 
+        try:
+            number = int(input('Guess the secret number?'))
+            return number
+            
+        except:
+            print('Not a valid input')
+        
+        
+    #return int(input('Guess the secret number? '))
 
 
 def check_guess(guess, secret):
